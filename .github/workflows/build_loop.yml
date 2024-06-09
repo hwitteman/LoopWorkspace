@@ -46,6 +46,26 @@ jobs:
 
           # the final customization listed above CANNOT have a continuation character "\"
           # more customizations can be pasted after this line
+
+            # Customize Loop: Download and apply patches
+      
+      - name: Customize Loop
+        run: |
+
+          # For each patch, edit comment line (keep the #) then update curl (and remove the #)
+
+          # Submodule Loop patches:
+          # Loop: Filename: customization details
+          # customize carb absorption
+          curl https://github.com/hwitteman/Loop/commit/55620e8a8027737da2eaebc88e452fba2dbff909.patch | git apply -v --directory=Loop
+          # customize future carbs
+          curl https://github.com/hwitteman/Loop/commit/70d18b2ab03bc626db5606225ecbf3b683a25fbc.patch | git apply -v --directory=Loop
+
+          # Submodule LoopKit patches:
+          # LoopKit: Filename: customization details
+          #curl https://github.com/username/LoopKit/commit/SHA-1.patch | git apply -v --directory=LoopKit
+
+          # Submodule xxxxx patches: Follow prototype above  
           
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
