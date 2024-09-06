@@ -249,16 +249,6 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           submodules: recursive
           ref: ${{ env.TARGET_BRANCH }}
-
-      # Customize Loop: Download and apply patches
-      - name: Customize Loop
-        run: |
-
-          # LoopWorkspace patches
-          # -applies any patches located in the LoopWorkspace/patches/ directory
-          if $(ls ./patches/* &> /dev/null); then
-          git apply ./patches/* --allow-empty -v --whitespace=fix
-          fi
 	  
       # Customize Loop: Download and apply patches
       - name: Customize Loop
