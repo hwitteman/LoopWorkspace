@@ -259,6 +259,7 @@ jobs:
           if $(ls ./patches/* &> /dev/null); then
           git apply ./patches/* --allow-empty -v --whitespace=fix
           fi
+	  
 # Customize Loop: Download and apply patches
       - name: Customize Loop
         run: | 
@@ -269,9 +270,9 @@ jobs:
           /bin/bash -c "$(curl -fsSL \
           https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/CustomizationSelect.sh)" \
           future_carbs_4h \
-	        high_carb_limit \
+	  high_carb_limit \
           override_sens \
-	        now_line \
+	  now_line \
           2002 \
           algorithm_experiments \
           testflight_expiration_warning
@@ -293,7 +294,7 @@ jobs:
           
           # Submodule LoopKit patches:
           # LoopKit: Filename: customization details
-	        # adjust lower target to 3.9 mol/L (70.2 mg/dl)
+	  # adjust lower target to 3.9 mol/L (70.2 mg/dl)
           curl https://github.com/username/LoopKit/commit/1a129451cd57500e39aeb428f2fe865ea981c27b.patch | git apply -v --directory=LoopKit
 
 
