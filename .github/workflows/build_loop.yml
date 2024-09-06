@@ -275,7 +275,7 @@ jobs:
           # Template for customizing submodule Loop (changes Loop app name to "CustomLoop")
           # Remove the "#" sign from the beginning of the line below to activate:
           # customize carb absorption (3h, 4h, 5h)
-          curl https://github.com/loopnlearn/Loop/commit/55620e8a8027737da2eaebc88e452fba2dbff909.patch | git apply --directory=Loop -v --whitespace=fix
+          # curl https://github.com/loopnlearn/Loop/commit/55620e8a8027737da2eaebc88e452fba2dbff909.patch | git apply --directory=Loop -v --whitespace=fix
 
           # Submodule LoopKit patches: change lower limit to 3.9 70.2
           # General template for customizing submodule LoopKit 
