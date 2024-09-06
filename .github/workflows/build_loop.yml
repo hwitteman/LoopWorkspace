@@ -260,15 +260,27 @@ jobs:
           git apply ./patches/* --allow-empty -v --whitespace=fix
           fi
 
+          # The "\" is a continuation character 
+          #   the line following a "\" should not be blank
+          /bin/bash -c "$(curl -fsSL \
+          https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/CustomizationSelect.sh)" \
+          future_carbs_4h \
+          high_carb_limit \
+          override_sens \
+          now_line \
+          2002 \
+          live_activity
+
           # Submodule Loop patches:
           # Template for customizing submodule Loop (changes Loop app name to "CustomLoop")
           # Remove the "#" sign from the beginning of the line below to activate:
-          #curl https://github.com/loopnlearn/Loop/commit/d206432b024279ef710df462b20bd464cd9682d4.patch | git apply --directory=Loop -v --whitespace=fix
+          # customize carb absorption (3h, 4h, 5h)
+          curl https://github.com/loopnlearn/Loop/commit/55620e8a8027737da2eaebc88e452fba2dbff909.patch | git apply --directory=Loop -v --whitespace=fix
 
-          # Submodule LoopKit patches:
+          # Submodule LoopKit patches: change lower limit to 3.9 70.2
           # General template for customizing submodule LoopKit 
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
-          #curl url_to_github_commit.patch | git apply --directory=LoopKit -v --whitespace=fix
+          curl https://github.com/username/LoopKit/commit/1a129451cd57500e39aeb428f2fe865ea981c27b.patch | git apply --directory=LoopKit -v --whitespace=fix
 
           # Submodule xxxxx patches:
 
