@@ -285,7 +285,6 @@ jobs:
           # LoopKit: Filename: customization details adjust lower target to 3.9 mol/L (70.2 mg/dl)
           curl https://github.com/username/LoopKit/commit/1a129451cd57500e39aeb428f2fe865ea981c27b.patch | git apply -v --directory=LoopKit
 
-
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
         run: |
