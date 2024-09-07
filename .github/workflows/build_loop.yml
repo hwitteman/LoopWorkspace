@@ -280,7 +280,7 @@ jobs:
           # Submodule LoopKit patches: change lower limit to 3.9 70.2
           # General template for customizing submodule LoopKit 
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
-          # curl https://github.com/username/LoopKit/commit/353ba212c4e9a08542df6da2cef050e7eeb95fc7.patch | git apply --directory=LoopKit -v --whitespace=fix
+          curl https://github.com/hwitteman/LoopKit/commit/353ba212c4e9a08542df6da2cef050e7eeb95fc7.patch | git apply --directory=LoopKit -v --whitespace=fix
 
           # Submodule xxxxx patches:
 
