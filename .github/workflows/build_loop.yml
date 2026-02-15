@@ -202,8 +202,11 @@ jobs:
           high_carb_limit \
           now_line \
           2hlollipop \
-          2002 \
-          live_activity
+          meal_days \
+          profiles
+
+          # the final customization listed above CANNOT have a continuation character
+          # more customizations can be pasted after this line
 
           # Submodule Loop patches:
           # Template for customizing submodule Loop (changes Loop app name to "CustomLoop")
